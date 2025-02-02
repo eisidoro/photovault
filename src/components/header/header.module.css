@@ -1,5 +1,5 @@
 .header__container {
-  @apply flex items-center justify-between p-4 bg-white;
+  @apply w-full flex items-center justify-between p-4 bg-white;
 }
 
 .header__left {
