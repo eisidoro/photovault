@@ -8,7 +8,7 @@ import { User } from "@/types/user";
 export const userRouter = createTRPCRouter({
   getUsers: baseProcedure.query(async () => {
     try {
-      const response = await fetch(env.NEXT_PUBLIC_USERS_API);
+      const response = await fetch(`${env.NEXT_PUBLIC_BASE_API_URL}/users`);
       const data = await response.json();
       return data as User[];
     } catch (error) {
@@ -25,7 +25,7 @@ export const userRouter = createTRPCRouter({
     .query(async ({ input }) => {
       try {
         const response = await fetch(
-          `${env.NEXT_PUBLIC_USERS_API}/${input.userId}/albums`
+          `${env.NEXT_PUBLIC_BASE_API_URL}/users/${input.userId}/albums`
         );
         const data = await response.json();
         return data as Album[];
@@ -34,6 +34,20 @@ export const userRouter = createTRPCRouter({
         if (error instanceof TRPCError) {
           throw error;
         }
+      }
+    }),
+
+  getAlbumPhotos: baseProcedure
+    .input(z.object({ albumId: z.string() }))
+    .query(async ({ input }) => {
+      try {
+        const response = await fetch(
+          `${env.NEXT_PUBLIC_BASE_API_URL}/albums/${input.albumId}/photos`
+        );
+        const data = await response.json();
+        return data as Photo[];
+      } catch (error) {
+        console.error("TRPC: Failed to fetch album photos", error);
       }
     }),
 });
