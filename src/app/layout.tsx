@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import TRPCProvider from "./_trpc/Provider";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar/app-sidebar";
+import { Header } from "@/components/header";
+
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -21,7 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} antialiased bg-gray-50`}>
-        <TRPCProvider>{children}</TRPCProvider>
+        <TRPCProvider>
+          <SidebarProvider>
+            <AppSidebar />
+            <main>
+              <Header />
+              {children}
+            </main>
+          </SidebarProvider>
+        </TRPCProvider>
       </body>
     </html>
   );
