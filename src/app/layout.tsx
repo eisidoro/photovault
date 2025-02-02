@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-import TRPCProvider from "./_trpc/Provider";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { TRPCProvider } from "@/trpc/client";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar/app-sidebar";
 import { Header } from "@/components/header";
 
