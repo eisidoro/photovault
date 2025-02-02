@@ -1,0 +1,3 @@
+.main-page__red-title {
+  @apply text-red-500;
+}

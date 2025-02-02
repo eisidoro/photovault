@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} antialiased`}>
+      <body className={`${dmSans.variable} antialiased bg-gray-50`}>
         <TRPCProvider>{children}</TRPCProvider>
       </body>
     </html>
