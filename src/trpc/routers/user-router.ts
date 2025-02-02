@@ -4,6 +4,7 @@ import { env } from "@/config/env";
 import { createTRPCRouter, baseProcedure } from "@/trpc/init";
 import { Album } from "@/types/album";
 import { User } from "@/types/user";
+import { Photo } from "@/types/photo";
 
 export const userRouter = createTRPCRouter({
   getUsers: baseProcedure.query(async () => {
