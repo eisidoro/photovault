@@ -46,7 +46,10 @@ export const userRouter = createTRPCRouter({
           `${env.NEXT_PUBLIC_BASE_API_URL}/albums/${input.albumId}/photos`
         );
         const data = await response.json();
-        return data as Photo[];
+
+        return data.filter(
+          (photo: Photo) => photo.albumId === Number(input.albumId)
+        );
       } catch (error) {
         console.error("TRPC: Failed to fetch album photos", error);
       }
