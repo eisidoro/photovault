@@ -1,0 +1,7 @@
+.users-list-item__container {
+  @apply grid grid-cols-1 grid-rows-2 hover:shadow-md transition-shadow duration-100;
+}
+
+.users-list-item__avatar {
+  @apply flex items-center justify-center w-10 h-10 bg-zinc-100 rounded-full;
+}
