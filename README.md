@@ -27,6 +27,7 @@ Create a `.env.local` file in the root directory and add the following variables
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 NEXT_PUBLIC_BASE_API_URL=https://jsonplaceholder.typicode.com
+```
 
 ## 💻 Development
 
@@ -73,7 +74,7 @@ Project Link: [https://github.com/eisidoro/photovault](https://github.com/eisido
 
 ## 🙏 Acknowledgments
 
-- 1. **Benchmarking:** 
+1. **Benchmarking:** 
     1. I’m using with reference Google Photos and iCloud Photos and the dsm-firmenich landing page.
     2. Both are similar in some design elements, like a sidebar and navbar. Sidebar is responsible to navigate across product resources and navbar has user settings (name, logout…) and buttons to add new photos or albums.
 
