@@ -7,8 +7,14 @@ import {
 } from "@/components/ui/popover";
 
 import styles from "./header.module.css";
+import { Button } from "../ui/button";
+import { createClient } from "@/utils/supabase/server";
 
-export function Header() {
+export async function Header() {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase.auth.getUser();
+
   return (
     <header className={styles["header__container"]}>
       <SidebarTrigger />
@@ -23,7 +29,10 @@ export function Header() {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </PopoverTrigger>
-          <PopoverContent>Place content for the popover here.</PopoverContent>
+          <PopoverContent>
+            <div>{data?.user?.email}</div>
+            <Button variant="outline">Logout</Button>
+          </PopoverContent>
         </Popover>
       </div>
     </header>
