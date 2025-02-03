@@ -1,0 +1,7 @@
+.login-form__title {
+  @apply text-2xl;
+}
+
+.login-form__description {
+  @apply text-sm text-muted-foreground;
+}
