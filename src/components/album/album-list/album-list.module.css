@@ -1,0 +1,11 @@
+.album__container {
+  @apply px-4 py-6;
+}
+
+.album__content {
+  @apply grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4;
+}
+
+.album__loading {
+  @apply flex items-center justify-center h-full;
+}

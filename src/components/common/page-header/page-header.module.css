@@ -1,0 +1,15 @@
+.page-header__container {
+  @apply flex relative items-center justify-center gap-2 p-4;
+}
+
+.page-header__title-container {
+  @apply flex items-center justify-center gap-2;
+}
+
+.page-header__back-button {
+  @apply absolute left-4;
+}
+
+.page-header__title {
+  @apply text-2xl font-bold;
+}
