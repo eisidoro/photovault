@@ -1,14 +1,18 @@
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useUserAlbums } from "@/hooks/use-user-albums";
-import { AlbumsListItem } from "../albums-list-item";
 import { Loader2 } from "lucide-react";
+import { AlbumsListItem } from "../albums-list-item";
+import { Album } from "@/types/album";
 import styles from "./albums-list.module.css";
 
-export function AlbumsList() {
-  const { userId } = useParams();
-  const { albums, isLoading } = useUserAlbums(userId as string);
-
+export function AlbumsList({
+  albums,
+  isLoading,
+  userId,
+}: {
+  albums: Album[];
+  isLoading: boolean;
+  userId: string;
+}) {
   if (isLoading) {
     return (
       <div className={styles["albums-list__loading"]}>
