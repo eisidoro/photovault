@@ -1,3 +1,7 @@
+'use client'
+
+import { Album } from "@/sections/album";
+
 export default function AlbumPage() {
-  return <div>AlbumPage</div>;
+  return <Album />;
 }
