@@ -1,3 +1,15 @@
 .photo__container {
-  @apply flex flex-col items-center justify-center hover:shadow-lg transition-all duration-300 cursor-pointer;
+  @apply grid grid-cols-1 grid-rows-2 justify-items-center hover:shadow-lg transition-all duration-300 cursor-pointer;
+}
+
+.photo__content {
+  @apply p-2;
+}
+
+.photo__header {
+  @apply flex items-center justify-center p-2;
+}
+
+.photo__title {
+  @apply text-center text-sm font-medium text-ellipsis;
 }
