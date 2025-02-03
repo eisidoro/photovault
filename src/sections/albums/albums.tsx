@@ -1,10 +1,15 @@
-"use client";
-
-import { useParams } from "next/navigation";
 import { AlbumsList } from "@/components/albums/albums-list";
+import { useUsers } from "@/hooks/use-users";
+import { useParams } from "next/navigation";
+import { PageHeader } from "@/components/common/page-header";
 
-export const Albums = () => {
+export function Albums() {
   const { userId } = useParams();
-
-  return <AlbumsList userId={userId as string} />;
-};
+  const { currentUser } = useUsers({ userId: userId as string });
+  return (
+    <>
+      <PageHeader title={`${currentUser?.name} > Albums`} backButton />
+      <AlbumsList />
+    </>
+  );
+}
