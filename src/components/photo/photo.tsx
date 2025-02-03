@@ -10,6 +10,7 @@ export const Photo = ({ photo }: { photo: PhotoType }) => {
     <Card className={styles["photo__container"]}>
       <CardContent className={styles["photo__content"]}>
         <Image
+          loading="lazy"
           src={"https://dummyimage.com/300"}
           alt={photo.title}
           width={100}
