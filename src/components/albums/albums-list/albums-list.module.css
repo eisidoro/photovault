@@ -1,3 +1,10 @@
 .albums-list__container {
-  @apply grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 px-4 py-6;
+}
+
+.albums-list__content {
+  @apply grid grid-cols-1 gap-4 px-4 py-6 md:grid-cols-4 lg:grid-cols-4;
+}
+
+.albums-list__loading {
+  @apply flex items-center justify-center h-full;
 }
