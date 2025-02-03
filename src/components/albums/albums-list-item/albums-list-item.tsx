@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Album } from "@/types/album";
 import styles from "./albums-list-item.module.css";
 
@@ -18,9 +12,6 @@ export const AlbumsListItem = ({ album }: AlbumsListItemProps) => {
       <CardHeader>
         <CardTitle>{album.title}</CardTitle>
       </CardHeader>
-      <CardContent>
-        <p>{album.title}</p>
-      </CardContent>
     </Card>
   );
 };
