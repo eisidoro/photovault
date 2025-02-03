@@ -1,3 +1,18 @@
 .users-list__container {
-  @apply flex flex-col gap-4 px-4 py-6;
+}
+
+.users-list__title-container {
+  @apply flex items-center justify-center p-2 gap-2 mt-4;
+}
+
+.users-list__title {
+  @apply text-2xl font-semibold text-ellipsis;
+}
+
+.users-list__content {
+  @apply grid grid-cols-1 gap-4 px-4 py-6 md:grid-cols-3 lg:grid-cols-3;
+}
+
+.users-list__loading {
+  @apply flex items-center justify-center h-full;
 }
