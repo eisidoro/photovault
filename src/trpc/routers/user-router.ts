@@ -52,6 +52,10 @@ export const userRouter = createTRPCRouter({
         );
       } catch (error) {
         console.error("TRPC: Failed to fetch album photos", error);
+
+        if (error instanceof TRPCError) {
+          throw error;
+        }
       }
     }),
 });
