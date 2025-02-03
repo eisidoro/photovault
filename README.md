@@ -56,14 +56,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 └── styles/            # CSS styles
 ```
 
-## 🚀 Deployment
-
-This project can be deployed using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/your-project-name)
-
-For more deployment options, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
-
 ## 🛠️ Built With
 
 - [Next.js](https://nextjs.org/) - The React framework used
