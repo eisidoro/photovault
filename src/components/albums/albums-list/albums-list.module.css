@@ -1,3 +1,3 @@
 .albums-list__container {
-  @apply flex flex-col gap-4 px-4 py-6;
+  @apply grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4 px-4 py-6;
 }
